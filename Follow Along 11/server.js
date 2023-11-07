@@ -45,7 +45,7 @@ app.post('/books', async (req, res) => {
 });
 
 app.put('/books/:id', async (req, res) => {
-    const {title, author} = req.bodu;
+    const {title, author} = req.body;
     const { id } = req.params;
     const books = await readBooks();
     const book = books.find(book => book.id === parseInt(id, 10));
